@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: "Lemon-Milk";
+    src: url(../font/LEMONMILK-Bold.otf);
+}
+
+:root {
+    --corPrimaria: #9B51E0;
+    --corSecundaria: #2D9CDB;
+    --outros: #9DDCFF;
+    --cinza: #292929;
+    --black: #000000;
+    --white: #ffffff;
+
+
+    /*Fontes*/
+
+    --Titulos: "Lemon-Milk";
+    --padrao: "Roboto", sans-serif;
+
+}
+
+
+#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #0d0d0d;
+}
+
+
+
+
+
+body {
+    background-color: var(--black);
+    color: var(--white);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    font-family: var(--Titulos);
+    border-right: 2px solid #00ffcc;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(22) 1s forwards, blink 0.7s step-end infinite;
+    text-shadow: 2px 2px 10px rgb(0, 54, 45);
+    font-size: 50px;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 19ch;
+    }
+
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
